@@ -8,21 +8,26 @@
 {% endblock %}
 
 {% block content %}
-  {% for post in posts %}
-    <article class="post">
-      <header>
-        <div>
-          <h1>{{ post['title'] }}</h1>
-          <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+  <div id="accordion">
+    {% for post in posts %}
+      <div class="card">
+        <div class="card-header" id="heading{{ post.id }}">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ post.id }}" aria-expanded="true" aria-controls="collapse{{ post.id }}">
+              {{ post.title }} by {{ post.username }} on {{ post.created.strftime('%Y-%m-%d') }}
+            </button>
+          </h2>
         </div>
-        {% if g.user['id'] == post['author_id'] %}
-          <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
-        {% endif %}
-      </header>
-      <p class="body">{{ post['body'] }}</p>
-    </article>
-    {% if not loop.last %}
-      <hr>
-    {% endif %}
-  {% endfor %}
+
+        <div id="collapse{{ post.id }}" class="collapse {% if loop.first %}show{% endif %}" aria-labelledby="heading{{ post.id }}" data-parent="#accordion">
+          <div class="card-body">
+            {{ post.body }}
+            {% if g.user['id'] == post['author_id'] %}
+              <a class="action" href="{{ url_for('blog.update', id=post.id) }}">Edit</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
