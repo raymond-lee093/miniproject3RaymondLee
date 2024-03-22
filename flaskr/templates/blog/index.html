@@ -10,9 +10,10 @@
 {% block content %}
   <div id="accordion">
     {% for post in posts %}
-      <div class="accordion-item">
+      <div class="accordion-item" style="margin-bottom: 20px;">
         <h2 class="accordion-header" id="heading{{ post.id }}">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ post.id }}" aria-expanded="true" aria-controls="collapse{{ post.id }}" style="background-color: #377ba8; color: white;">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ post.id }}" aria-expanded="true" aria-controls="collapse{{ post.id }}" style="background-color: #377ba8; color: white; padding: 15px 25px; font-size: 25px;">
+            <i class="fas fa-chevron-down" style="margin-right: 10px; color: black"></i>
             {{ post.title }}
           </button>
         </h2>
