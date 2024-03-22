@@ -11,26 +11,26 @@
   <div id="accordion">
     {% for post in posts %}
       <div class="card">
-        <div class="card-header custom-header" id="heading{{ post.id }}">
+        <div class="card-header" id="heading{{ post.id }}" style="background-color: #377ba8; color: white; font-size: 18px;">
           <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ post.id }}" aria-expanded="true" aria-controls="collapse{{ post.id }}">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ post.id }}" aria-expanded="true" aria-controls="collapse{{ post.id }}" style="color: white;">
               {{ post.title }}
             </button>
           </h2>
         </div>
 
         <div id="collapse{{ post.id }}" class="collapse {% if loop.first %}show{% endif %}" aria-labelledby="heading{{ post.id }}" data-parent="#accordion">
-          <div class="card-body">
+          <div class="card-body" style="background-color: #f8f9fa;">
             <div></div>
             {{ post.body }}
             <hr style="border-color: black;">
             <div>
-             <div class="about" style="font-size: smaller; font-style: italic;">by {{ post.username }} on {{ post.created.strftime('%Y-%m-%d') }}</div>
+             <div class="about" style="font-size: smaller; font-style: italic; color: #6c757d;">by {{ post.username }} on {{ post.created.strftime('%Y-%m-%d') }}</div>
             </div>
-            </div>
-            <div class="mb-3 pl-3">
+          </div>
+          <div class="mb-3 pl-3">
             {% if g.user['id'] == post['author_id'] %}
-              <a class="action" href="{{ url_for('blog.update', id=post.id) }}">Edit</a>
+              <a class="action" href="{{ url_for('blog.update', id=post.id) }}" style="color: #377ba8;">Edit</a>
             {% endif %}
           </div>
         </div>
