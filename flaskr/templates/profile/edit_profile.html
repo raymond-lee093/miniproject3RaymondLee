@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+  <h2>Edit Profile</h2>
+  <form method="post">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" value="{{ user['username'] }}" required>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="{{ user['email'] }}" required>
+    <label for="bio">Bio</label>
+    <textarea name="bio" id="bio" required>{{ user['bio'] }}</textarea>
+    <button class="btn-sm" style="background-color: #5D8AA8; color: white" type="submit">Save</button>
+  </form>
+{% endblock %}
