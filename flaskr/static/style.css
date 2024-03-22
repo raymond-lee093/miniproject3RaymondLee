@@ -11,7 +11,7 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; c
 .content { padding: 0 1rem 1rem; }
 .content > header { border-bottom: 1px solid #333333; display: flex; align-items: flex-end; }
 .content > header h1 { flex: auto; margin: 1rem 0 0.25rem 0; color: #5D8AA8; }
-.flash { margin: 1em 0; padding: 1em; background: lightslategray; border: 1px solid #5D8AA8; }
+.flash { margin: 1em 0; padding: 1em; background: #DC3545; border: 1px solid #5D8AA8; }
 .post > header { display: flex; align-items: flex-end; font-size: 0.85em; }
 .post > header > div:first-of-type { flex: auto; }
 .post > header h1 { font-size: 1.5em; margin-bottom: 0; color: #5D8AA8; }
@@ -25,4 +25,5 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; c
 input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; background-color:#5D8AA8 ; color: white; }
 .custom-header { background-color: gray; color: white; }
+.btn-sm{ align-self: start; min-width: 10em; }
 
