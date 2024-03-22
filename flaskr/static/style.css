@@ -25,6 +25,6 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; c
 input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; background-color:#5D8AA8 ; color: white; }
 .custom-header { background-color: gray; color: white; }
-.btn-sm{ align-self: start; min-width: 10em; }
+.btn-sm{ align-self: start; min-width: 11.5em; }
 .bg-lightgrey { background-color:#e5e5e5;}
 
