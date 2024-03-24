@@ -17,7 +17,8 @@ users. They can also submit their own reviews for movies they have watched. The 
 secure password storage using hashing algorithms and session management to track user sessions. For database 
 integration, the application connects with a SQL light database to store user information, movie details, and reviews. 
 This allows for efficient data management and retrieval, ensuring that the application can handle a large number of 
-users and reviews. CSS and Bootstrap are implemented with HTML in application primarily for styling and layout purposes.
+users and reviews. CSS and Bootstrap are implemented with HTML in application primarily for styling and layout purposes
+for webpages.
 
 ## Getting Started
 
